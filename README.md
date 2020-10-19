@@ -9,8 +9,9 @@
 ### Research Links for interfacing:
 1. Functionality and example application of TCA9548A [link](https://www.hackster.io/tarantula3/tca9548a-i2c-multiplexer-module-with-arduino-and-nodemcu-3d3313)
 2. VEML6040 python example code [link](https://www.raspberrypi.org/forums/viewtopic.php?t=263498)
-3. to test detection from raspberry pi and basic understanding of TCA9548A [link](https://www.raspberrypi.org/forums/viewtopic.php?t=146416)
+3. To test detection from raspberry pi and basic understanding of TCA9548A [link](https://www.raspberrypi.org/forums/viewtopic.php?t=146416)
 4. Raspberry Pi I2C interfacing Tutorial, detecting connected hardware [link](https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c)
+5. SMBus [link](http://wiki.erazor-zone.de/wiki:linux:python:smbus:doc)
 ### Degugging and Bugs:
 #### Hardware:
 V1.4
@@ -20,3 +21,4 @@ V1.4
 #### Software:
 
 1. Reset pin on Raspberry Pi is low by default, change to high to prevent resetting the TCA9548A or just disconnect the reset pin.
+

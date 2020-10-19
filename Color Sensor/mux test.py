@@ -1,39 +1,48 @@
 #!/usr/bin/python
-# TCA9548A I2C multiplexer
-# I2C Address: 70 through 77
-# Channel: 0 - 7
 
 import smbus
+import RPi.GPIO as GPIO
 
+GPIO.setmode(GPIO.BOARD)
+GPIO.setup(11, GPIO.OUT, initial=GPIO.HIGH)
+GPIO.setwarnings(False)
 
-# class for the I2C switch----------------------------------------------------
-class I2C_SW(object):
-    # init________________________________________________________________________
-    def __init__(self, name, address, bus_nr):
-        self.name = name
-        self.address = address
-        self.bus_nr = bus_nr
-        self.bus = smbus.SMBus(bus_nr)
+class multiplex:
 
-    # Change to i2c channel 0..7__________________________________________________
-    def chn(self, channel):
-        self.bus.write_byte(self.address, 2 ** channel)
+    def __init__(self, bus):
+        self.bus = smbus.SMBus(bus)
 
-    # block all channels read only the main I2c ( on which is the address SW)_____
-    def _rst(self):
-        self.bus.write_byte(self.address, 0)
-        print self.name, ' ', 'Switch reset'
+    def channel(self, address,
+                channel):  # values 0-7 indictae the channel, anything else (eg -1) turns off all channels
 
-    # read all 8 channels__________________________________________________________
-    def _all(self):
-        self.bus.write_byte(self.address, 0Xff)
-        print self.name, ' ', 'Switch read all lines'
+        if (channel == 0):
+            action = 0x01
+        elif (channel == 1):
+            action = 0x02
+        elif (channel == 2):
+            action = 0x04
+        elif (channel == 3):
+            action = 0x08
+        elif (channel == 4):
+            action = 0x10
+        elif (channel == 5):
+            action = 0x20
+        elif (channel == 6):
+            action = 0x40
+        elif (channel == 7):
+            action = 0x80
+        elif (channel ==-1):
+            action = 0x00
 
-    # define the usual sensor 0X70 bus 1__________________________________________
+        #self.bus.write_byte_data(address, 0x04, action)  # 0x04 is the register for switching channels
+        self.bus.write_byte(address,action)
+        print self.bus.read_byte(address)
 
+if __name__ == '__main__':
+    bus = 1  # 0 for rev1 boards etc.
+    address = 0x70
 
-SW = I2C_SW('I2C switch 0', 0X70, 1)
-SW._all()
-SW._rst()
-# to enable a channel : SW_chn(channel number - here 0 to 7)
-# check with i2cdetect y -1 (if bus_nr=1)
+    plexer = multiplex(bus)
+    plexer.channel(address, 0)
+
+    print("Now run i2cdetect")

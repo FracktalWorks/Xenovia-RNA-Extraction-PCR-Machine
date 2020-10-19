@@ -34,10 +34,8 @@ bus = smbus.SMBus(1)  # /dev/i2c-1, in my case
 VEML6040_ADDR = 0x10
 VEML6040_CONF = 0x00
 
-class veml6040:
+class VEML6040(object):
     def __init__(self):
-        pass
-
 # -------------------------
 def VEML6040_init():
     VEML6040_enableSensor()
