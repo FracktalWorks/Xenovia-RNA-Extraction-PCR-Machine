@@ -15,7 +15,7 @@
 ### Degugging and Bugs:
 #### Hardware:
 V1.4
-1. Upstream SDA SCL lines on the TCA9548A doesnt not have pullup resistors
+1. Upstream SDA SCL lines on the TCA9548A doesnt not have pullup resistors, uses internal pullups on the raspberry pi board
 2. Diodes on the Raspberry Pi shield need to be reversed due to error in placement from JLCPCB
 
 #### Software:

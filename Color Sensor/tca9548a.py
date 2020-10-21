@@ -1,3 +1,27 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  tca9548a.py
+#  Texas Semiconductor TCA9548A i2c mux library
+#
+#  Copyright 2020  Fracktal Works
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
+#  Written by vjvarada (Vijay Raghav Varada)
 
 
 # Load Necessary Modules:
@@ -33,7 +57,7 @@ class TCA9548A(object):
     :rtype:				Bool
     """
 
-    # ----------------------------------------------
+    # ----------------------------------------------s
     # Device Name:
     device_name = _DEFAULT_NAME
 
@@ -97,8 +121,7 @@ class TCA9548A(object):
         GPIO.setwarnings(False)
 
 
-    # --------------------------------------------------------------------------
-    def is_connected(self):
+    def isConnected(self):
         """
             Determine if the device is conntected to the system.
             :return: True if the device is connected, otherwise False.
@@ -111,18 +134,16 @@ class TCA9548A(object):
             return False
 
 
-    def enable_channels(self, enable):
+    def enableChannels(self, enable):
         """
-        This method enables the connection of specific channels on the
-        Qwiic Mux.
-        :param enable:		Channel(s) to enable on the Qwiic Mux. Input
+        This method enables the connection of specific channels on the Mux.
+        :param enable:		Channel(s) to enable on the Mux. Input
                             must be either an individual integer or
                             list. The method will automatically convert
                             an individual integer into a list.
                             Range- 0 to 7
         """
         command = self._i2c.read_byte(self.address)
-
         # If entry is an integer and not a list; turn it into a list of (1)
         if type(enable) is not list: enable = [enable]
 
@@ -138,11 +159,10 @@ class TCA9548A(object):
 
         self._i2c.write_byte(self.address, command)
 
-    def disable_channels(self, disable):
+    def disableChannels(self, disable):
         """
-        This method disables the connection of specific channels on the
-        Qwiic Mux.
-        :param enable:		Channel(s) to disable on the Qwiic Mux.
+        This method disables the connection of specific channels on the Mux.
+        :param dissable:	Channel(s) to disable on the Mux.
                             Input must be either an individual integer
                             or list. The method will automatically
                             convert an individual integer into a list.
@@ -165,28 +185,26 @@ class TCA9548A(object):
 
         self._i2c.write_byte(self.address, command)
 
-    def enable_all(self):
+    def enableAll(self):
         """
-        This method enables the connection of specific channels on the
-        Qwiic Mux.
+        This method enables the connection of specific channels on the Mux.
         """
 
         # Enable all channels
         self._i2c.write_byte(self.address, 0xFF)
 
-    def disable_all(self):
+    def disableAll(self):
         """
-        This method disables the connection of all channels on the
-        Qwiic Mux.
+        This method disables the connection of all channels on the Mux.
         """
 
         # Disable all channels
         self._i2c.write_byte(self.address, 0x00)
 
-    def list_channels(self):
+    def listChannels(self):
         """
         This method lists all the available channels and their current
-        configuration (enabled or disabled) on the Qwiic Mux.
+        configuration (enabled or disabled) on the Mux.
         """
 
         enabled_channels = self._i2c.read_byte(self.address)

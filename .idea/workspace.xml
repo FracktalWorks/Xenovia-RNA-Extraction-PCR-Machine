@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69240bcf-a9ec-41b2-9060-04f651c91298" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Color Sensor/tca9548a.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Color Sensor/Sensor Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Color Sensor/mux test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/mux test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Color Sensor/tca9548aScanner.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color Sensor/ColorSensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/colorSensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color Sensor/tca9548a.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/tca9548a.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Color Sensor/veml6040.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/veml6040.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -13,6 +13,16 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Xenovia-RNA-Extraction-PCR-Machine" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,5 +67,16 @@
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="2576" y="345" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603108069890" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Color Sensor/tca9548a.py</url>
+          <line>45</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
