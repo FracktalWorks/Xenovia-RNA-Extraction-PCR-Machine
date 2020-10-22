@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69240bcf-a9ec-41b2-9060-04f651c91298" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Color Sensor/Sensor Test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Color Sensor/ColorSensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/colorSensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Color Sensor/tca9548a.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/tca9548a.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Color Sensor/veml6040.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/veml6040.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color Sensor/Sensor Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/Test Codes/Sensor Test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color Sensor/colorSensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/colorSensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color Sensor/mux test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/Test Codes/mux test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Color Sensor/veml6040_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Color Sensor/Test Codes/veml6040_test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +36,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Vijay\Documents\GitHub\Xenovia-RNA-Extraction-PCR-Machine\Color Sensor\Test Codes" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -63,10 +67,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2576" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1603108069890">
+    <state x="2576" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1603361544534">
       <screen x="1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="2576" y="345" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603108069890" />
+    <state x="2576" y="345" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1603361544534" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

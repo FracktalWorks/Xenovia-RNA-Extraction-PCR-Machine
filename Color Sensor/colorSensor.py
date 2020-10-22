@@ -33,6 +33,9 @@ import threading
 class colorSensor(object):
     '''
     Main class object for color sensor
+    :param i2cbus (int):                The i2c bus the device is connected on
+    :param sensorChannels (list[int]):  list of sensor channels connected.
+                                        if single int given, it is converted to a list
     '''
 
     def __init__(self, i2cBus = None,sensorChannels = None):
@@ -53,6 +56,7 @@ class colorSensor(object):
     def hardwareCheck(self):
         """
         Check if all hardware is functioning fine
+        :returns bool:          result of hardware check. True if all ok, False if it isnt
         """
         if self.mux.isConnected() == False:
             print "TCA9458A is Not Connected"
@@ -77,6 +81,7 @@ class colorSensor(object):
     def isConnected(self):
         """
         Check if all hardware is functioning fine
+        :returns bool:          True if all hardware connected, false if not
         """
         if self.mux.isConnected() == False:
             return False
@@ -90,35 +95,56 @@ class colorSensor(object):
             return True
 
     def getCONF(self,channels = None):
+        """
+        Gets value of CONF register of each sensor channel
+        :param channels (list[int]):            List of channels to get CONF register value from.
+                                                if int provided, it is converted to list
+        :returns values (list):                 list of CONF register values for sensor channels
+        """
+        values = []
         self.mux.disableAll()
         if channels == None:
             channels = self.sensorChannels
         if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
-            print "Sensor on channel " + str(channel) + ", CONF: " + str(self.colorSensor.getCONF())
+            values.append(self.colorSensor.getCONF())
             self.mux.disableChannels(channel)
+        return values
 
 
     def enableSensor(self,channels = None):
         """
         Enables a single sensor and mux channel
+        :param channels (list[int]):            List of channels to enable sensor on
+                                                if int provided, it is converted to list
         """
         self.mux.disableAll()
         if channels == None:
             channels = self.sensorChannels
         if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
             self.colorSensor.enableSensor()
             self.mux.disableChannels(channel)
 
-    def dissableSensor(self,channels):
+    def dissableSensor(self,channels = None):
         """
-        dissables all sensors and mux channels
+        disables all sensors and mux channels
+        :param channels (list[int]):            List of channels to disable sensor on
+                                                if int provided, it is converted to list
         """
         self.mux.disableAll()
+        if channels == None:
+            channels = self.sensorChannels
+        if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
             self.colorSensor.disableSensor()
             self.mux.disableChannels(channel)
@@ -126,12 +152,25 @@ class colorSensor(object):
     def setSensorIT(self,it=2,channels = None):
         """
         Sets integration time for all sensors in array
+        :param it (int):          Integration time
+
+        IT   INTEGRATION TIME   G SENSITIVITY       MAX. DETECTABLE LUX
+        0    40 ms               0.25168             16 496
+        1    80 ms               0.12584             8248
+        2    160 ms              0.06292             4124
+        3    320 ms              0.03146             2062
+        4    640 ms              0.01573             1031
+        5    1280 ms             0.007865            515.4
+
+        :param channels (list[int]):            List of channels to set IT on
         """
         self.mux.disableAll()
         if channels == None:
             channels = self.sensorChannels
         if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
             self.colorSensor.setIT(it)
             self.mux.disableChannels(channel)
@@ -139,6 +178,10 @@ class colorSensor(object):
     def setSensorMode(self,channels = None,auto=True):
         """
         sets mode for all sensors in array to triggered (Manual Force Mode) or auto Mode
+        :param channels (list[int]):            List of channels to set IT on
+        :param auto (bool):                     flag to set reading mode.
+                                                True = Auto Mode
+                                                False = Manual Force MOde
         """
         self.mux.disableAll()
         if channels == None:
@@ -146,41 +189,59 @@ class colorSensor(object):
         if type(channels) is not list: channels = [channels]
         if auto:
             for channel in channels:
+                if channel not in self.sensorChannels:
+                    raise ValueError("Sensor channels provided are not available")
                 self.mux.enableChannels(channel)
                 self.colorSensor.autoMode()
                 self.mux.disableChannels(channel)
         else:
             for channel in channels:
+                if channel not in self.sensorChannels:
+                    raise ValueError("Sensor channels provided are not available")
                 self.mux.enableChannels(channel)
                 self.colorSensor.forceMode()
                 self.mux.disableChannels(channel)
 
     def channelTrigger(self,channels = None):
-        "triggers one detection cycle for sensor channel(s) when in manual force mode"
+        """
+        Triggers one detection cycle for sensor channel(s) when in manual force mode
+        :param channels (list[int]):            List of channels to trigger sensing
+        """
         self.mux.disableAll()
         if channels == None:
             channels = self.sensorChannels
         if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
             self.colorSensor.trigger()
             self.mux.disableChannels(channel)
 
     def readRGBW(self,channels = None):
-        "reads channels from the sensor"
+        """
+        Reads all colors from channels of the sensor
+        :param channels (list[int]):            List of channels to read values from
+        """
         values = []
         self.mux.disableAll()
         if channels == None:
             channels = self.sensorChannels
         if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
             values.append(self.colorSensor.getRGBW())
             self.mux.disableChannels(channel)
         return values
 
     def readColors(self,color = ["red","green","blue","white"], channels = None):
-        "reads channels from the sensor"
+        """
+        reads specific colors from the channels of the sensor
+        :param color (list[str]):           list of colors needed to be read from each sensor
+        :param channels (list[int]):            List of channels to read values from
+        """
         if type(color) is not list: color = [color]
         values = []
         self.mux.disableAll()
@@ -188,6 +249,8 @@ class colorSensor(object):
             channels = self.sensorChannels
         if type(channels) is not list: channels = [channels]
         for channel in channels:
+            if channel not in self.sensorChannels:
+                raise ValueError("Sensor channels provided are not available")
             self.mux.enableChannels(channel)
             value = []
             if "red" in color:
