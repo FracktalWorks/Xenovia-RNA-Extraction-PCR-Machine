@@ -1,0 +1,17 @@
+__version: 1.4.0
+octoprint:
+  available: false
+  error: null
+  hash: 29504f25334fc084e1fd0ae3d1d40a02
+  information:
+    local:
+      name: 1.4.0
+      value: 1.4.0
+    needs_online: true
+    remote:
+      name: 1.4.0 (stable)
+      release_notes: https://github.com/OctoPrint/OctoPrint/releases/tag/1.4.0
+      value: 1.4.0
+  online: true
+  possible: true
+  timestamp: 1592629972.602678

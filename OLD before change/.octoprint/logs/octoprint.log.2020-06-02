@@ -1,0 +1,122 @@
+2020-06-02 23:29:41,540 - octoprint.server.heartbeat - INFO - Server heartbeat <3
+2020-06-02 23:29:41,543 - octoprint.server - INFO - --- Log roll over detected ---------------------------------------------------
+2020-06-02 23:29:41,543 - octoprint.server - INFO - OctoPrint 1.4.0
+2020-06-02 23:29:41,545 - octoprint.plugin.core - INFO - 15 plugin(s) registered with the system:
+|  Action Command Prompt Support (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/action_command_prompt
+|  Announcement Plugin (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/announcements
+|  Anonymous Usage Tracking (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/tracking
+|  Application Keys Plugin (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/appkeys
+|  Backup & Restore (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/backup
+|  Core Wizard (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/corewizard
+|  Discovery (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/discovery
+|  Error Tracking (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/errortracking
+|  Logging (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/logging
+|  Login UI (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/loginui
+|  Pi Support Plugin (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/pi_support
+|  Plugin Manager (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/pluginmanager
+|  Printer Safety Check (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/printer_safety_check
+|  Software Update (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/softwareupdate
+|  Virtual Printer (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/virtual_printer
+Prefix legend: ! = disabled, # = blacklisted, * = incompatible
+2020-06-02 23:29:41,554 - octoprint.environment - INFO - Detected environment is Python 2.7.16 under Linux (linux2). Details:
+|  hardware:
+|      cores: 4
+|      freq: 1400.0
+|      ram: 971055104
+|  os:
+|      id: linux
+|      platform: linux2
+|  plugins:
+|      pi_support:
+|          model: Raspberry Pi 3 Model B Plus Rev 1.3
+|  python:
+|      pip: 20.1.1
+|      version: 2.7.16
+|      virtualenv: /home/pi/OctoPrint/venv
+2020-06-02 23:29:41,555 - octoprint.server - INFO - ------------------------------------------------------------------------------
+2020-06-02 23:17:10,816 - octoprint.startup - INFO - ******************************************************************************
+2020-06-02 23:17:10,826 - octoprint.startup - INFO - Starting OctoPrint 1.4.0
+2020-06-02 23:17:10,828 - octoprint.startup - INFO - ******************************************************************************
+2020-06-02 23:17:12,387 - octoprint.plugin.core - INFO - Loading plugins from /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins, /home/pi/.octoprint/plugins and installed plugin packages...
+2020-06-02 23:17:14,316 - octoprint.plugins.octoprint.plugins.discovery - INFO - pybonjour is not installed, Zeroconf Discovery won't be available
+2020-06-02 23:17:14,331 - octoprint.plugin.core - INFO - Found 15 plugin(s) providing 15 mixin implementations, 27 hook handlers
+2020-06-02 23:17:14,539 - octoprint.server.heartbeat - INFO - Starting server heartbeat, 900.0s interval
+2020-06-02 23:17:14,578 - octoprint.server - INFO - Intermediary server started
+2020-06-02 23:17:14,579 - octoprint.plugin.core - INFO - Loading plugins from /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins, /home/pi/.octoprint/plugins and installed plugin packages...
+2020-06-02 23:17:14,689 - octoprint.plugin.core - INFO - Found 15 plugin(s) providing 15 mixin implementations, 27 hook handlers
+2020-06-02 23:17:14,722 - octoprint.filemanager.storage - INFO - Initializing the file metadata for /home/pi/.octoprint/uploads...
+2020-06-02 23:17:14,723 - octoprint.filemanager.storage - INFO - ... file metadata for /home/pi/.octoprint/uploads initialized successfully.
+2020-06-02 23:17:14,728 - octoprint.server - INFO - Added new permission from plugin action_command_prompt: PLUGIN_ACTION_COMMAND_PROMPT_INTERACT (needs: u"Need(method='role', value=u'plugin_action_command_prompt_interact')")
+2020-06-02 23:17:14,730 - octoprint.server - INFO - Added new permission from plugin announcements: PLUGIN_ANNOUNCEMENTS_READ (needs: u"Need(method='role', value=u'plugin_announcements_read')")
+2020-06-02 23:17:14,731 - octoprint.server - INFO - Added new permission from plugin announcements: PLUGIN_ANNOUNCEMENTS_MANAGE (needs: u"Need(method='role', value=u'plugin_announcements_manage'), Need(method='role', value=u'plugin_announcements_read')")
+2020-06-02 23:17:14,732 - octoprint.server - INFO - Added new permission from plugin appkeys: PLUGIN_APPKEYS_ADMIN (needs: u"Need(method='role', value=u'plugin_appkeys_admin')")
+2020-06-02 23:17:14,733 - octoprint.server - INFO - Added new permission from plugin backup: PLUGIN_BACKUP_ACCESS (needs: u"Need(method='role', value=u'plugin_backup_access')")
+2020-06-02 23:17:14,735 - octoprint.server - INFO - Added new permission from plugin logging: PLUGIN_LOGGING_MANAGE (needs: u"Need(method='role', value=u'plugin_logging_manage')")
+2020-06-02 23:17:14,737 - octoprint.server - INFO - Added new permission from plugin pi_support: PLUGIN_PI_SUPPORT_STATUS (needs: u"Need(method='role', value=u'plugin_pi_support_check')")
+2020-06-02 23:17:14,738 - octoprint.server - INFO - Added new permission from plugin pluginmanager: PLUGIN_PLUGINMANAGER_MANAGE (needs: u"Need(method='role', value=u'plugin_pluginmanager_manage')")
+2020-06-02 23:17:14,739 - octoprint.server - INFO - Added new permission from plugin pluginmanager: PLUGIN_PLUGINMANAGER_INSTALL (needs: u"Need(method='role', value=u'plugin_pluginmanager_install'), Need(method='role', value=u'plugin_pluginmanager_manage')")
+2020-06-02 23:17:14,740 - octoprint.server - INFO - Added new permission from plugin printer_safety_check: PLUGIN_PRINTER_SAFETY_CHECK_DISPLAY (needs: u"Need(method='role', value=u'plugin_printer_safety_check_display')")
+2020-06-02 23:17:14,742 - octoprint.server - INFO - Added new permission from plugin softwareupdate: PLUGIN_SOFTWAREUPDATE_CHECK (needs: u"Need(method='role', value=u'plugin_softwareupdate_check')")
+2020-06-02 23:17:14,743 - octoprint.server - INFO - Added new permission from plugin softwareupdate: PLUGIN_SOFTWAREUPDATE_UPDATE (needs: u"Need(method='role', value=u'plugin_softwareupdate_update')")
+2020-06-02 23:17:14,801 - octoprint.plugins.softwareupdate - INFO - Loaded version cache from disk
+2020-06-02 23:17:15,827 - octoprint.util.pip - INFO - Using "/home/pi/OctoPrint/venv/bin/python2 -m pip" as command to invoke pip
+2020-06-02 23:17:16,609 - octoprint.util.pip - INFO - Version of pip is 20.1.1
+2020-06-02 23:17:16,611 - octoprint.util.pip - INFO - pip installs to /home/pi/OctoPrint/venv/lib/python2.7/site-packages (writable -> yes), --user flag needed -> no, virtual env -> yes
+2020-06-02 23:17:16,612 - octoprint.util.pip - INFO - ==> pip ok -> yes
+2020-06-02 23:17:16,618 - octoprint.plugin.core - INFO - Initialized 15 plugin implementation(s)
+2020-06-02 23:17:16,629 - octoprint.plugin.core - INFO - 15 plugin(s) registered with the system:
+|  Action Command Prompt Support (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/action_command_prompt
+|  Announcement Plugin (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/announcements
+|  Anonymous Usage Tracking (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/tracking
+|  Application Keys Plugin (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/appkeys
+|  Backup & Restore (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/backup
+|  Core Wizard (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/corewizard
+|  Discovery (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/discovery
+|  Error Tracking (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/errortracking
+|  Logging (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/logging
+|  Login UI (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/loginui
+|  Pi Support Plugin (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/pi_support
+|  Plugin Manager (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/pluginmanager
+|  Printer Safety Check (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/printer_safety_check
+|  Software Update (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/softwareupdate
+|  Virtual Printer (bundled) = /home/pi/OctoPrint/venv/lib/python2.7/site-packages/octoprint/plugins/virtual_printer
+Prefix legend: ! = disabled, # = blacklisted, * = incompatible
+2020-06-02 23:17:16,644 - octoprint.environment - INFO - Detected environment is Python 2.7.16 under Linux (linux2). Details:
+|  hardware:
+|      cores: 4
+|      freq: 1400.0
+|      ram: 971055104
+|  os:
+|      id: linux
+|      platform: linux2
+|  plugins:
+|      pi_support:
+|          model: Raspberry Pi 3 Model B Plus Rev 1.3
+|  python:
+|      pip: 20.1.1
+|      version: 2.7.16
+|      virtualenv: /home/pi/OctoPrint/venv
+2020-06-02 23:17:16,656 - octoprint.server - INFO - Reset webasset folder /home/pi/.octoprint/generated/webassets...
+2020-06-02 23:17:16,675 - octoprint.server - INFO - Reset webasset folder /home/pi/.octoprint/generated/.webassets-cache...
+2020-06-02 23:17:17,600 - octoprint.server - INFO - Shutting down intermediary server...
+2020-06-02 23:17:17,949 - octoprint.server - INFO - Intermediary server shut down
+2020-06-02 23:17:17,951 - octoprint.events - INFO - Processing startup event, this is our first event
+2020-06-02 23:17:17,952 - octoprint.events - INFO - Adding 0 events to queue that were held back before startup event
+2020-06-02 23:17:17,955 - octoprint.filemanager - INFO - Adding backlog items from all storage types to analysis queue...
+2020-06-02 23:17:17,959 - octoprint.server.util.watchdog - INFO - Running initial scan on watched folder...
+2020-06-02 23:17:17,962 - octoprint.filemanager - INFO - Added 0 items from storage type "local" to analysis queue
+2020-06-02 23:17:17,964 - octoprint.server.util.watchdog - INFO - ... initial scan done.
+2020-06-02 23:17:17,981 - octoprint.plugins.discovery - INFO - Registered OctoPrint instance on xenovia for SSDP
+2020-06-02 23:17:18,013 - octoprint.server - INFO - Listening on http://0.0.0.0:5000 and http://[::]:5000
+2020-06-02 23:17:18,863 - octoprint.util.pip - INFO - Using "/home/pi/OctoPrint/venv/bin/python2 -m pip" as command to invoke pip
+2020-06-02 23:17:18,865 - octoprint.util.pip - INFO - pip installs to /home/pi/OctoPrint/venv/lib/python2.7/site-packages (writable -> yes), --user flag needed -> no, virtual env -> yes
+2020-06-02 23:17:18,866 - octoprint.util.pip - INFO - ==> pip ok -> yes
+2020-06-02 23:17:18,893 - octoprint.plugins.announcements - INFO - Loaded channel _important from https://octoprint.org/feeds/important.xml in 0.84s
+2020-06-02 23:17:19,119 - octoprint.plugins.pluginmanager - INFO - Loaded plugin repository data from https://plugins.octoprint.org/plugins.json
+2020-06-02 23:17:20,974 - octoprint.plugins.pluginmanager - INFO - Loaded plugin notices data from https://plugins.octoprint.org/notices.json
+2020-06-02 23:17:21,112 - octoprint.util.pip - INFO - Using "/home/pi/OctoPrint/venv/bin/python2 -m pip" as command to invoke pip
+2020-06-02 23:17:27,184 - octoprint.util.pip - INFO - pip installs to /home/pi/OctoPrint/venv/lib/python2.7/site-packages/ (writable -> yes), --user flag needed -> no, virtual env -> yes
+2020-06-02 23:17:27,185 - octoprint.util.pip - INFO - ==> pip ok -> yes
+2020-06-02 23:17:27,200 - octoprint.plugins.softwareupdate - INFO - Saved version cache to disk
+2020-06-02 23:17:27,311 - octoprint.server.preemptive_cache - INFO - Preemptively caching / (ui _default) for {'query_string': 'l10n=en', 'path': '/', 'base_url': 'http://xenovia.local:5000/'}
+2020-06-02 23:17:34,670 - octoprint.server.preemptive_cache - INFO - ... done in 7.36s

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///usr/share/rpd-wallpaper/lasers.jpg" added="2020-05-25T17:14:43Z" modified="2020-05-25T17:14:43Z" visited="2020-05-25T17:14:44Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2020-05-25T17:14:43Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/fjord.jpg" added="2020-05-25T17:15:04Z" modified="2020-05-25T17:15:04Z" visited="2020-05-25T17:15:04Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2020-05-25T17:15:04Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/balloon.jpg" added="2020-05-25T17:15:15Z" modified="2020-05-25T17:15:15Z" visited="2020-05-25T17:15:15Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2020-05-25T17:15:15Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/aurora.jpg" added="2020-06-20T05:47:33Z" modified="2020-06-20T05:47:33Z" visited="2020-06-20T05:47:33Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2020-06-20T05:47:33Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/raspberry-pi-logo.png" added="2020-06-20T05:47:46Z" modified="2020-06-20T05:47:46Z" visited="2020-06-20T05:47:46Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2020-06-20T05:47:46Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/share/rpd-wallpaper/waterfall.jpg" added="2020-06-20T05:47:59Z" modified="2020-06-20T05:47:59Z" visited="2020-06-20T05:47:59.806900Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="pipanel" exec="&apos;pipanel %u&apos;" modified="2020-06-20T05:47:59Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>
