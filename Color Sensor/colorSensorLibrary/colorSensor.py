@@ -30,7 +30,7 @@ from tca9548a import TCA9548A
 import threading
 
 
-class colorSensor(object):
+class colorSensorArray(object):
     '''
     Main class object for color sensor
     :param i2cbus (int):                The i2c bus the device is connected on
@@ -117,7 +117,7 @@ class colorSensor(object):
 
     def enableSensor(self,channels = None):
         """
-        Enables a single sensor and mux channel
+        Enables the channels of the color sensor array
         :param channels (list[int]):            List of channels to enable sensor on
                                                 if int provided, it is converted to list
         """
@@ -134,7 +134,7 @@ class colorSensor(object):
 
     def dissableSensor(self,channels = None):
         """
-        disables all sensors and mux channels
+        Enables the channels of the color sensor array
         :param channels (list[int]):            List of channels to disable sensor on
                                                 if int provided, it is converted to list
         """
@@ -175,7 +175,7 @@ class colorSensor(object):
             self.colorSensor.setIT(it)
             self.mux.disableChannels(channel)
 
-    def setSensorMode(self,channels = None,auto=True):
+    def setSensorMode(self,auto=True, channels = None):
         """
         sets mode for all sensors in array to triggered (Manual Force Mode) or auto Mode
         :param channels (list[int]):            List of channels to set IT on
@@ -264,21 +264,3 @@ class colorSensor(object):
             self.mux.disableChannels(channel)
             values.append(value)
         return values
-
-
-def main(args):
-    Sensor = colorSensor()
-    Sensor.hardwareCheck()
-    Sensor.setSensorMode(None,auto=True)
-    Sensor.getCONF()
-    if Sensor.isConnected():
-        Sensor.enableSensor()
-        Sensor.setSensorIT(2)
-        print Sensor.readColors(color = "green")
-
-###########################
-
-if __name__ == '__main__':
-    import sys
-
-    sys.exit(main(sys.argv))
