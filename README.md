@@ -1,7 +1,5 @@
 # Xenovia RT-PCR Machine
 
-
-
 Ankit Bhatnagar
 ankit.bhatnagarindia@gmail.com
 
@@ -46,7 +44,7 @@ V1.4
 
 ### X Server + Xenovia Application Autostart
 1. https://www.raspberrypi.org/forums/viewtopic.php?t=42888
-2. websences.com/dpkg-reconfigure-x11-common/
+2. https://www.websences.com/dpkg-reconfigure-x11-common/
 3. https://github.com/raspberrypi/linux/issues/2517#issuecomment-387867933
 
 1. global xinitrc file : /etc/X11/xinit/xinitrc (set permissin a+x)
@@ -61,4 +59,4 @@ V1.4
 4. https://github.com/raspberrypi/linux/issues/2517#issuecomment-387867933
 
 ### Execution Flow
-rc.local ---> startx ---> global .xinitrc ---> pi user .xinitrc ---> xenovia program
+```rc.local ---> startx ---> global .xinitrc ---> pi user .xinitrc ---> xenovia program```
