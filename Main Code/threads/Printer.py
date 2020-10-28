@@ -29,11 +29,11 @@ class Printer(QtCore.QThread):
     # Printer Communication Thread
 
     # G-Codes
-    gcode_move = 'G1 X{0} Y{1} Z{2}'
-    gcode_move_x = 'G1 X{0}'
-    gcode_move_y = 'G1 Y{0}'
-    gcode_move_z = 'G1 Z{0}'
-    gcode_move_e = 'G1 E{0}'
+    gcode_move = 'G1 X{0} Y{1} Z{2} F6000'
+    gcode_move_x = 'G1 X{0} F2000'
+    gcode_move_y = 'G1 Y{0} F6000'
+    gcode_move_z = 'G1 Z{0} F2000'
+    gcode_move_e = 'G1 E{0} F2000'
     gcode_home = 'G28 X Y Z'
     gcode_home_x = 'G28 X'
     gcode_home_y = 'G28 Y'

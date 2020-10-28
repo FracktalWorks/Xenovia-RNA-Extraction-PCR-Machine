@@ -30,18 +30,18 @@ class MechanicalParameters(object):
     # 4 Predefined Liquid Levels
     pipette_level_count = 4
     pipette_distance_aspirate_max_mm = 19
-    pipette_distance_aspirate_min_mm = [12, 15.90, 6.70, 3.60]
+    pipette_distance_aspirate_min_mm = [11, 9, 6, 4]
 
     # Tip
-    tip_length_mm = 53
+    tip_length_mm = 57
 
     # Tip Holder Tray
     tip_tray_count_rows = 12
     tip_tray_count_columns = 8
-    tip_tray_position_origin_mm = 36.8
+    tip_tray_position_origin_mm = 33.8
     tip_tray_offset_row1_origin_mm = 10
     tip_tray_offset_inter_row_mm = 9
-    tip_tray_distance_coasting_without_tip_mm = 60
+    tip_tray_distance_coasting_without_tip_mm = 45
     tip_tray_distance_coasting_with_tip_mm = tip_tray_distance_coasting_without_tip_mm - tip_length_mm
     tip_tray_distance_pipette_tip_lock_mm = 103
 
@@ -49,7 +49,7 @@ class MechanicalParameters(object):
     tip_trash_position_origin_mm = 351
     tip_trash_position_groove_mm = tip_trash_position_origin_mm + 20
     tip_trash_offset_tip_groove_size_mm = 6
-    tip_trash_distance_coasting_without_tip_mm = 60
+    tip_trash_distance_coasting_without_tip_mm = 45
     tip_trash_distance_coasting_with_tip_mm = tip_trash_distance_coasting_without_tip_mm - tip_length_mm
     tip_trash_distance_tip_groove_locking_mm = 47
     tip_trash_distance_tio_groove_unlocking_mm = 13
@@ -61,8 +61,8 @@ class MechanicalParameters(object):
     well_tray_offset_row1_origin_mm = 10
     well_tray_offset_inter_row_mm = 9
     well_tray_offset_from_center_mm = 2.5
-    well_tray_distance_tip_inserted_mm = 34
-    well_tray_distance_coasting_without_tip_mm = 110
+    well_tray_distance_tip_inserted_mm = 30
+    well_tray_distance_coasting_without_tip_mm = 90
     well_tray_distance_coasting_with_tip_mm = well_tray_distance_coasting_without_tip_mm - tip_length_mm
 
     def __init__(self):
