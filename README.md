@@ -2,7 +2,7 @@
 
 ## Firmware Archiecture
 
-![alt-text]("Firmware Architecture")
+![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Firmware%20Structure.png?raw=true "Firmware Architecture")
 
 
 ## Xenovia Color Sensor 
@@ -11,7 +11,7 @@
 1. veml6040 colour sensor IC:  [Datasheet](https://www.vishay.com/docs/84276/veml6040.pdf)
 2. TCA9548A I2C Switch: [Datasheet](https://www.ti.com/lit/ds/symlink/tca9548a.pdf)
 
-![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Color%20Sensor/Color%20Sensor%20HW%20Block%20Diagram.png?raw=true "Hardware Architecture")
+![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Color%20Sensor%20HW%20Block%20Diagram.png?raw=true "Hardware Architecture")
 
 ### Research Links for interfacing:
 1. Functionality and example application of TCA9548A [link](https://www.hackster.io/tarantula3/tca9548a-i2c-multiplexer-module-with-arduino-and-nodemcu-3d3313)
