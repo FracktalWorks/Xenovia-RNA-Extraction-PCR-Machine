@@ -4,6 +4,8 @@
 
 ![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Firmware%20Structure.png?raw=true "Firmware Architecture")
 
+### Research Links:
+
 
 ## Xenovia Color Sensor 
 
@@ -28,4 +30,3 @@ V1.4
 #### Software:
 
 1. Reset pin on Raspberry Pi is low by default, change to high to prevent resetting the TCA9548A or just disconnect the reset pin.
-

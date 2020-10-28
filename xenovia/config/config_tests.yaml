@@ -1,0 +1,15 @@
+# Tests Configuration
+
+tests:
+  test_1:
+    name: 'COVID19'
+    description: 'Covid 19 Test'
+    file: 'TestCovid19.py'
+  test_2:
+    name: 'TIP PICK TRASH'
+    description: 'Tip Pick And Trash'
+    file: 'TestTipPickTrash.py'
+  test_3:
+    name: 'PUMPING ACTION'
+    description: 'Pumping Action'
+    file: 'TestPumpingAction.py'
