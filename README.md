@@ -1,4 +1,11 @@
-# Xenovia Color Sensor 
+# Xenovia RT-PCR Machine
+
+## Firmware Archiecture
+
+![alt-text]("Firmware Architecture")
+
+
+## Xenovia Color Sensor 
 
 ### Main Components:
 1. veml6040 colour sensor IC:  [Datasheet](https://www.vishay.com/docs/84276/veml6040.pdf)
