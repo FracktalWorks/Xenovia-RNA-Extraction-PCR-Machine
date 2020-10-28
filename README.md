@@ -1,6 +1,16 @@
 # Xenovia RT-PCR Machine
 
-## Firmware Archiecture
+
+
+Ankit Bhatnagar
+ankit.bhatnagarindia@gmail.com
+
+Vijay Raghav Varada
+vjvarada@fracktal.in
+
+
+
+## Firmware Architecture
 
 ![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Firmware%20Structure.png?raw=true "Firmware Architecture")
 
@@ -30,3 +40,25 @@ V1.4
 #### Software:
 
 1. Reset pin on Raspberry Pi is low by default, change to high to prevent resetting the TCA9548A or just disconnect the reset pin.
+
+
+## Xenovia Application Auto Startup References
+
+### X Server + Xenovia Application Autostart
+1. https://www.raspberrypi.org/forums/viewtopic.php?t=42888
+2. websences.com/dpkg-reconfigure-x11-common/
+3. https://github.com/raspberrypi/linux/issues/2517#issuecomment-387867933
+
+1. global xinitrc file : /etc/X11/xinit/xinitrc (set permissin a+x)
+2. pi user .xinitrc file : /home/pi/.xinitrc (set permission a+x)
+3. global rc.local file : /etc/rc.local (set permission a+x)
+
+### Removing Logo And Initial Boot Stuff
+
+1. https://www.raspberrypi.org/forums/viewtopic.php?t=189666
+2. https://www.raspberrypi.org/forums/viewtopic.php?t=236647
+3. https://www.thedigitalpictureframe.com/customize-your-raspberry-pi-splash-screen-raspbian-stretch-april-2019-version/
+4. https://github.com/raspberrypi/linux/issues/2517#issuecomment-387867933
+
+### Execution Flow
+rc.local ---> startx ---> global .xinitrc ---> pi user .xinitrc ---> xenovia program
