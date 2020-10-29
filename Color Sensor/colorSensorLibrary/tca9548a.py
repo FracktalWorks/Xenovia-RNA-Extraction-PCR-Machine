@@ -21,7 +21,7 @@
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
 #
-#  Written by vjvarada (Vijay Raghav Varada)
+#  Written by @vjvarada (Vijay Raghav Varada)
 
 
 # Load Necessary Modules:
