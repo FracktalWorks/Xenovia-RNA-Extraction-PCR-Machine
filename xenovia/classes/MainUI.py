@@ -29,7 +29,6 @@ from classes.WellTray import WellTray
 from classes.TipTrash import TipTrash
 from classes.Pipette import Pipette
 from classes.Magnet import Magnet
-from classes.PCRTray import PCRTray
 from classes.QTablePatientDetailsDataModel import QTablePatientDetailsDataModel
 from helpers.BaseLogger import BaseLogger
 from helpers.CSV import *
@@ -87,7 +86,6 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
     handle_current_test = None
     handle_tip_tray = None
     handle_well_tray = None
-    handle_pcr_tray = None
     handle_trash_tray = None
     handle_pipette = None
     handle_magnet = None
@@ -125,7 +123,6 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
         self.handle_printer = printer
         self.handle_tip_tray = TipHolderTray(self.handle_printer)
         self.handle_well_tray = WellTray(self.handle_printer)
-        self.handle_pcr_tray =  PCRTray(self.handle_printer)
         self.handle_trash_tray = TipTrash(self.handle_printer)
         self.handle_pipette = Pipette(self.handle_printer)
         self.handle_magnet = Magnet(self.handle_printer)
@@ -300,7 +297,6 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
         self.handle_current_test = test_reference(self.handle_printer,  \
                                     self.handle_tip_tray, \
                                     self.handle_well_tray, \
-                                    self.handle_pcr_tray,\
                                     self.handle_trash_tray, \
                                     self.handle_pipette, \
                                     self.handle_magnet, \

@@ -26,7 +26,6 @@ class TestBase(QtCore.QThread):
     printer = None
     tip_holder = None
     well = None
-    pcr = None
     tip_trash = None
     pipette = None
     magnet = None
@@ -45,11 +44,10 @@ class TestBase(QtCore.QThread):
     test_aborting = False
     test_aborted = False
 
-    def __init__(self, printer, tip_holder, well,pcr, tip_trash, pipette, magnet, imagebox_signal, textbox_signal, progressbar_signal, test_abort_signal, test_finish_signal):
+    def __init__(self, printer, tip_holder, well, tip_trash, pipette, magnet, imagebox_signal, textbox_signal, progressbar_signal, test_abort_signal, test_finish_signal):
         if not printer \
             or not tip_holder \
             or not well \
-            or not pcr \
             or not tip_trash \
             or not pipette \
             or not magnet \
@@ -63,7 +61,6 @@ class TestBase(QtCore.QThread):
         self.printer = printer
         self.tip_holder = tip_holder
         self.well = well
-        self.pcr = pcr
         self.tip_trash = tip_trash
         self.pipette = pipette
         self.magnet = magnet
