@@ -12,7 +12,20 @@ vjvarada@fracktal.in
 
 ![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Firmware%20Structure.png?raw=true "Firmware Architecture")
 
+## Firmware Functional Block Diagram
 ![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Code%20Functional%20Block%20Diagram.png?raw=true "Firmware Functional BLock Diagram")
+
+* `main_window` in main.py is an object of `MainUI` class that is the workhorse for the firmware.
+* `MainUI` class is the main workhorse. Using getter methods the `Printer` class and `Tests` class is parsed into the `MainUI` class. `xenovia.ui` is inherited by `MainUI` class.
+* `xenovia_ui` is the generated code from the `xenovia_ui.ui` file made in Qt Designer and then converted into python code using PyQt5 UI code generator 5.14.2 .
+* `Printer` class is Abstracts the Gcode calls to the control board connected over USB and presents an API that is used by `tests` and `MainUI` etc for printer movement functionality.
+* `MKSCheck` creates the connection to the printer over USB.
+* `Tests` is the class that manages available tests, listing them, parsing their class object to `MainUI` etc.
+* tests folder contains the assays which are dynamically initialised into `MainUI` by `Tests` class. each Assay class inherits `TestBase` class.
+* `TestBase` contains methods common to all Assays.
+* When an assay class in dynamically created into `MainUI` by `Tests`, the base function movement classes of `Pipette`, `TipTrash`, `Magnet` etc which have motion related medhods are passed into it.
+* `MechanicalParameters` has all the dimenttions of the accessories in the machine, that the base function movement classes of `Pipette`, `TipTrash`, `Magnet` etc uses.
+
 ### Research Links:
 
 
