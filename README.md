@@ -12,6 +12,7 @@ vjvarada@fracktal.in
 
 ![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Firmware%20Structure.png?raw=true "Firmware Architecture")
 
+![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Code%20Functional%20Block%20Diagram.png?raw=true "Firmware Functional BLock Diagram")
 ### Research Links:
 
 
