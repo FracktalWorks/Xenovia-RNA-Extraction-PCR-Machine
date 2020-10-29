@@ -6,8 +6,6 @@ ankit.bhatnagarindia@gmail.com
 Vijay Raghav Varada
 vjvarada@fracktal.in
 
-
-
 ## Firmware Architecture
 
 ![alt-text](https://github.com/FracktalWorks/Xenovia-RNA-Extraction-PCR-Machine/blob/master/Doccumentation%20&%20Resources/Firmware%20Structure.png?raw=true "Firmware Architecture")
@@ -20,6 +18,7 @@ vjvarada@fracktal.in
 * `xenovia_ui` is the generated code from the `xenovia_ui.ui` file made in Qt Designer and then converted into python code using PyQt5 UI code generator 5.14.2 .
 * `Printer` class is Abstracts the Gcode calls to the control board connected over USB and presents an API that is used by `tests` and `MainUI` etc for printer movement functionality.
 * `MKSCheck` creates the connection to the printer over USB.
+* `MKSSerialCommunication` class handles the communication to the printer. its initialised by the `Printer` class.
 * `Tests` is the class that manages available tests, listing them, parsing their class object to `MainUI` etc.
 * tests folder contains the assays which are dynamically initialised into `MainUI` by `Tests` class. each Assay class inherits `TestBase` class.
 * `TestBase` contains methods common to all Assays.
