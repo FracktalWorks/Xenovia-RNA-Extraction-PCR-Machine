@@ -65,5 +65,16 @@ class MechanicalParameters(object):
     well_tray_distance_coasting_without_tip_mm = 90
     well_tray_distance_coasting_with_tip_mm = well_tray_distance_coasting_without_tip_mm - tip_length_mm
 
+    # PCR Tray
+    PCR_tray_count_rows = 4
+    PCR_tray_count_columns = 8
+    PCR_tray_position_origin_mm = 20
+    PCR_tray_offset_row1_origin_mm = 3
+    PCR_tray_offset_inter_row_mm = 9
+    PCR_tray_offset_from_center_mm = 2.5
+    PCR_tray_distance_tip_inserted_mm = 30
+    PCR_tray_distance_coasting_without_tip_mm = 90
+    PCR_tray_distance_coasting_with_tip_mm = PCR_tray_distance_coasting_without_tip_mm - tip_length_mm
+
     def __init__(self):
         pass

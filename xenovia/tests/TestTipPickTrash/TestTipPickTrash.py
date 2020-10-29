@@ -26,6 +26,7 @@ class TestTipPickTrash(TestBase):
     def __init__(self, printer=None, \
                         tip_holder=None, \
                         well=None, \
+                        pcr=None,\
                         tip_trash=None, \
                         pipette = None, \
                         magnet = None, \
@@ -38,6 +39,7 @@ class TestTipPickTrash(TestBase):
             printer, \
             tip_holder, \
             well, \
+            pcr,\
             tip_trash, \
             pipette, \
             magnet, \

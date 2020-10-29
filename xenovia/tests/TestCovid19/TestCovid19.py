@@ -107,6 +107,7 @@ class TestCovid19(TestBase):
     def __init__(self, printer=None, \
                         tip_holder=None, \
                         well=None, \
+                        pcr=None,\
                         tip_trash=None, \
                         pipette = None, \
                         magnet = None, \
@@ -119,6 +120,7 @@ class TestCovid19(TestBase):
             printer, \
             tip_holder, \
             well, \
+            pcr,\
             tip_trash, \
             pipette, \
             magnet, \
