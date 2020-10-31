@@ -238,6 +238,12 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
             button.setText(self.handle_tests.getTestName(i))
             button.setCheckable(True)
             button.setFixedSize(button_size)
+            font = QtGui.QFont()
+            font.setFamily(_fromUtf8("Gotham Medium"))
+            font.setPointSize(14)
+            font.setBold(False)
+            font.setWeight(50)
+            self.button.setFont(font)
             self.button.setStyleSheet(_fromUtf8("QPushButton {\n"
                                               "     border: 1px solid rgb(87, 87, 87);\n"
                                               "    border-right: none;\n"
