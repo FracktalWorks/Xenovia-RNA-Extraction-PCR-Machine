@@ -22,6 +22,11 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
 from PyQt5 import QtCore
 from PyQt5.QtCore import *
+try:
+    _fromUtf8 = QtCore.QString.fromUtf8
+except AttributeError:
+    def _fromUtf8(s):
+        return s
 
 from ui import xenovia_ui
 from classes.TipHolderTray import TipHolderTray
@@ -233,6 +238,31 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
             button.setText(self.handle_tests.getTestName(i))
             button.setCheckable(True)
             button.setFixedSize(button_size)
+            self.button.setStyleSheet(_fromUtf8("QPushButton {\n"
+                                              "     border: 1px solid rgb(87, 87, 87);\n"
+                                              "    border-right: none;\n"
+                                              "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
+                                              "    \n"
+                                              "\n"
+                                              "}\n"
+                                              "\n"
+                                              "QPushButton:pressed {\n"
+                                              "\n"
+                                              "    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,\n"
+                                              "                                      stop: 0 #dadbde, stop: 1 #f6f7fa);\n"
+                                              "}\n"
+                                              "\n"
+                                              "QPushButton:flat {\n"
+                                              "    border: none; /* no border for a flat push button */\n"
+                                              "}\n"
+                                              "\n"
+                                              "QPushButton:default {\n"
+                                              "    border-color: navy; /* make the default button prominent */\n"
+                                              "}\n"
+                                              "\n"
+                                              "QPushButton:focus {\n"
+                                              "    outline: none;\n"
+                                              "}"))
             self.test_list_button_group.addButton(button)
             if x >= self.DEFINE_TESTS_GRID_MAX_X:
                 x = 0
