@@ -25,8 +25,8 @@ class Pipette:
 
     PIPETTE_LEVEL_UL_50 = 0
     PIPETTE_LEVEL_UL_100 = 1
-    PIPETTE_LEVEL_UL_150 = 2
-    PIPETTE_LEVEL_UL_200 = 3
+    PIPETTE_LEVEL_UL_170 = 2
+    PIPETTE_LEVEL_UL_300 = 3
     
     def __init__(self, printer=None):
         if not printer:
