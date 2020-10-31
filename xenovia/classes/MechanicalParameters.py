@@ -52,7 +52,7 @@ class MechanicalParameters(object):
     tip_trash_distance_coasting_without_tip_mm = 45
     tip_trash_distance_coasting_with_tip_mm = tip_trash_distance_coasting_without_tip_mm - tip_length_mm
     tip_trash_distance_tip_groove_locking_mm = 47
-    tip_trash_distance_tio_groove_unlocking_mm = 13
+    tip_trash_distance_tip_groove_unlocking_mm = 13
 
     # Well Tray
     well_tray_count_rows = 12
