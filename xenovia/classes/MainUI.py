@@ -243,8 +243,8 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
             font.setPointSize(14)
             font.setBold(False)
             font.setWeight(50)
-            self.button.setFont(font)
-            self.button.setStyleSheet(_fromUtf8("QPushButton {\n"
+            button.setFont(font)
+            button.setStyleSheet(_fromUtf8("QPushButton {\n"
                                               "     border: 1px solid rgb(87, 87, 87);\n"
                                               "    border-right: none;\n"
                                               "    background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0.188, stop:0 rgba(180, 180, 180, 255), stop:1 rgba(255, 255, 255, 255));\n"
