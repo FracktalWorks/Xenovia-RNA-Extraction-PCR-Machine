@@ -152,7 +152,8 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
 
         # Tests Screen
         self.cpBackButton.clicked.connect(lambda: self.showMainScreen())
-        self.cpNextButton.clicked.connect(lambda: self.showPatientDetailsScreen())
+        # self.cpNextButton.clicked.connect(lambda: self.showPatientDetailsScreen())
+        self.cpNextButton.clicked.connect(lambda: self.showVTMScreen()) # skips patient details screen for the moment
 
         # Patient Details Screen
         self.pdBackButton.clicked.connect(lambda: self.showTestsScreen())
