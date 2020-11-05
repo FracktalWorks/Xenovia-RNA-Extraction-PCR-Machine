@@ -23,8 +23,8 @@ class MechanicalParameters(object):
     # Magnet
     # 2 Servos
     servo_ports = [0, 1]
-    servo_position_degree_disengaged = [0, 180]
-    servo_position_degree_engaged = [90, 80]
+    servo_position_degree_disengaged = [0, 0]
+    servo_position_degree_engaged = [90, 90]
 
     # Pipette
     # 4 Predefined Liquid Levels
@@ -38,31 +38,31 @@ class MechanicalParameters(object):
     # Tip Holder Tray
     tip_tray_count_rows = 12
     tip_tray_count_columns = 8
-    tip_tray_position_origin_mm = 33.8
+    tip_tray_position_origin_mm = 2.1
     tip_tray_offset_row1_origin_mm = 10
     tip_tray_offset_inter_row_mm = 9
-    tip_tray_distance_coasting_without_tip_mm = 45
+    tip_tray_distance_coasting_without_tip_mm = 58
     tip_tray_distance_coasting_with_tip_mm = tip_tray_distance_coasting_without_tip_mm - tip_length_mm
-    tip_tray_distance_pipette_tip_lock_mm = 103
+    tip_tray_distance_pipette_tip_lock_mm = 71 #103
 
     # Tip Trash
-    tip_trash_position_origin_mm = 351
-    tip_trash_position_groove_mm = tip_trash_position_origin_mm + 20
+    tip_trash_position_origin_mm = 375
+    tip_trash_position_groove_mm = tip_trash_position_origin_mm + 22
     tip_trash_offset_tip_groove_size_mm = 6
-    tip_trash_distance_coasting_without_tip_mm = 45
+    tip_trash_distance_coasting_without_tip_mm = 20
     tip_trash_distance_coasting_with_tip_mm = tip_trash_distance_coasting_without_tip_mm - tip_length_mm
-    tip_trash_distance_tip_groove_locking_mm = 47
-    tip_trash_distance_tip_groove_unlocking_mm = 13
+    tip_trash_distance_tip_groove_locking_mm = 20
+    tip_trash_distance_tip_groove_unlocking_mm = 10
 
     # Well Tray
     well_tray_count_rows = 12
     well_tray_count_columns = 8
-    well_tray_position_origin_mm = 194
+    well_tray_position_origin_mm = 146.50 #194
     well_tray_offset_row1_origin_mm = 10
     well_tray_offset_inter_row_mm = 9
     well_tray_offset_from_center_mm = 2.5
     well_tray_distance_tip_inserted_mm = 30
-    well_tray_distance_coasting_without_tip_mm = 90
+    well_tray_distance_coasting_without_tip_mm = 22
     well_tray_distance_coasting_with_tip_mm = well_tray_distance_coasting_without_tip_mm - tip_length_mm
 
     # PCR Tray
