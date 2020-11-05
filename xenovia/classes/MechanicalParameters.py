@@ -46,13 +46,13 @@ class MechanicalParameters(object):
     tip_tray_distance_pipette_tip_lock_mm = 71 #103
 
     # Tip Trash
-    tip_trash_position_origin_mm = 375
+    tip_trash_position_origin_mm = 351
     tip_trash_position_groove_mm = tip_trash_position_origin_mm + 22
     tip_trash_offset_tip_groove_size_mm = 6
-    tip_trash_distance_coasting_without_tip_mm = 20
+    tip_trash_distance_coasting_without_tip_mm = 45
     tip_trash_distance_coasting_with_tip_mm = tip_trash_distance_coasting_without_tip_mm - tip_length_mm
-    tip_trash_distance_tip_groove_locking_mm = 20
-    tip_trash_distance_tip_groove_unlocking_mm = 10
+    tip_trash_distance_tip_groove_locking_mm = 47
+    tip_trash_distance_tip_groove_unlocking_mm = 13
 
     # Well Tray
     well_tray_count_rows = 12
