@@ -29,12 +29,15 @@ class TipTrash:
 
     def trashTips(self):
         # Trash Tips
+        self.printer_handle.moveZRelative(MechanicalParameters.PCR_tray_distance_tip_inserted_mm * -1)
+        self.printer_handle.moveYAbsolute(MechanicalParameters.tip_trash_position_origin_mm)
         self.printer_handle.moveZAbsolute(MechanicalParameters.tip_trash_distance_coasting_with_tip_mm)
         self.printer_handle.moveYAbsolute(MechanicalParameters.tip_trash_position_groove_mm)
+        self.printer_handle.moveZRelative(-1 * MechanicalParameters.tip_trash_distance_tip_groove_unlocking_mm)
+        #self.printer_handle.moveYRelative(MechanicalParameters.tip_trash_offset_tip_groove_size_mm)
         self.printer_handle.moveZRelative(MechanicalParameters.tip_trash_distance_tip_groove_unlocking_mm)
-        self.printer_handle.moveYRelative(MechanicalParameters.tip_trash_offset_tip_groove_size_mm)
-        self.printer_handle.moveZRelative(-1 * MechanicalParameters.tip_trash_distance_tip_groove_locking_mm)
-        self.printer_handle.moveZRelative(MechanicalParameters.tip_trash_distance_tip_groove_locking_mm)
+        #self.printer_handle.moveZRelative(MechanicalParameters.tip_trash_distance_tip_groove_locking_mm)
+        #self.printer_handle.moveZRelative(-1 * MechanicalParameters.tip_trash_distance_tip_groove_locking_mm)
         self.printer_handle.moveYAbsolute(MechanicalParameters.tip_trash_position_origin_mm)
         
         #self.printer_handle.moveZAbsolute(MechanicalParameters.tip_trash_distance_tip_groove_locking_mm)

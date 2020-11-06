@@ -21,8 +21,8 @@ class TestPumpingAction(TestBase):
         'self.imagebox_signal.emit("image2.png")',
         'self.tip_holder.getTips()',
         'self.well.gotoRowN(2)',
-        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_100)',
-	'self.holdTestMinutes(0.05)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
+	    'self.holdTestMinutes(0.05)',
         'self.well.gotoRowN(1)',
         'self.pipette.dispense()',
         'self.tip_trash.trashTips()'       
