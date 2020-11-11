@@ -20,12 +20,19 @@ class TestPumpingAction(TestBase):
         'self.textbox_signal.emit("test started")',
         'self.imagebox_signal.emit("image2.png")',
         'self.tip_holder.getTips()',
+        'self.well.gotoRowN(3)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.well.gotoRowN(2)',
-        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
-	    'self.holdTestMinutes(0.05)',
-        'self.well.gotoRowN(1)',
         'self.pipette.dispense()',
-        'self.tip_trash.trashTips()'       
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
+        'self.magnet.engageAll()',
+        'self.holdTestMinutes(2.00)',
+        'self.well.gotoRowN(2)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
+    
+        'self.tip_trash.trashTips()',
+        'self.magnet.disengageAll()',
+     
     ]
 
     def __init__(self, printer=None, \

@@ -28,7 +28,7 @@ class TestCovid19(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_100, 10, 1, 1)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(10.00)',
+        'self.holdTestMinutes(2.00)',
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()'
@@ -50,7 +50,7 @@ class TestCovid19(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_100, 10, 1, 1)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(10.00)',
+        'self.holdTestMinutes(2.00)',
         'self.well.gotoRowN(2)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()'
@@ -72,7 +72,7 @@ class TestCovid19(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_100, 10, 1, 1)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(10.00)',
+        'self.holdTestMinutes(2.00)',
         'self.well.gotoRowN(11)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()'
@@ -94,7 +94,7 @@ class TestCovid19(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_100, 10, 1, 1)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(10.00)',
+        'self.holdTestMinutes(2.00)',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()'
