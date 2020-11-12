@@ -134,7 +134,6 @@ class MainUI(QMainWindow, xenovia_ui.Ui_MainWindow):
         self.handle_trash_tray = TipTrash(self.handle_printer)
         self.handle_pipette = Pipette(self.handle_printer)
         self.handle_magnet = Magnet(self.handle_printer)
-        self.handle_printer.moveServo(0,0)
 
     def setHandleTests(self, tests=None):
         # Set Tests Handle

@@ -130,6 +130,7 @@ class Printer(QtCore.QThread):
         # Printer Home
         BaseLogger.info('Homing Printer ...')
         self.home()
+        self.moveServo(0,0)
         
         self.homed = True
         
