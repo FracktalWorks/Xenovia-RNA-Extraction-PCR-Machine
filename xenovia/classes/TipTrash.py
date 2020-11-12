@@ -59,4 +59,14 @@ class TipTrash:
         self.printer_handle.moveYAbsolute(MechanicalParameters.tip_trash_position_origin_mm)
         self.printer_handle.moveZAbsolute(MechanicalParameters.tip_trash_distance_coasting_with_tip_mm)
         self.printer_handle.moveYAbsolute(MechanicalParameters.tip_trash_position_groove_mm)
-    
+
+
+    def moveUp(self):
+        # Just moves up
+        self.printer_handle.moveZRelative(MechanicalParameters.PCR_tray_distance_tip_inserted_mm * -1)
+        self.printer_handle.moveZAbsolute(MechanicalParameters.tip_trash_distance_coasting_with_tip_mm)
+
+    def moveToTrashUnlock(self):
+        # Removal from move to Trash with Tips, Shall have tips
+        self.printer_handle.moveYAbsolute(MechanicalParameters.tip_trash_position_origin_mm)
+        
