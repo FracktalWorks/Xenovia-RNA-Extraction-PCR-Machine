@@ -38,7 +38,7 @@ class MechanicalParameters(object):
     # Tip Holder Tray
     tip_tray_count_rows = 12
     tip_tray_count_columns = 8
-    tip_tray_position_origin_mm = 2.1
+    tip_tray_position_origin_mm = 6.8
     tip_tray_offset_row1_origin_mm = 10
     tip_tray_offset_inter_row_mm = 9
     tip_tray_distance_coasting_without_tip_mm = 40
@@ -46,7 +46,7 @@ class MechanicalParameters(object):
     tip_tray_distance_pipette_tip_lock_mm = 66 #103
 
     # Tip Trash
-    tip_trash_position_origin_mm = 340 #365
+    tip_trash_position_origin_mm = 344.8 #365
     tip_trash_position_groove_mm = tip_trash_position_origin_mm + 57#32
     tip_trash_offset_tip_groove_size_mm = 55 #30
     tip_trash_distance_coasting_without_tip_mm = 80
@@ -57,7 +57,7 @@ class MechanicalParameters(object):
     # Well Tray
     well_tray_count_rows = 12
     well_tray_count_columns = 8
-    well_tray_position_origin_mm = 148.3 #194
+    well_tray_position_origin_mm = 153.1 #194
     well_tray_offset_row1_origin_mm = 10
     well_tray_offset_inter_row_mm = 9
     well_tray_offset_from_center_mm = 2.5
@@ -68,7 +68,7 @@ class MechanicalParameters(object):
     # PCR Tray
     PCR_tray_count_rows = 4
     PCR_tray_count_columns = 8
-    PCR_tray_position_origin_mm = 290
+    PCR_tray_position_origin_mm = 292
     PCR_tray_offset_row1_origin_mm = 4
     PCR_tray_offset_inter_row_mm = 9
     PCR_tray_offset_from_center_mm = 2.5
