@@ -3,8 +3,8 @@
 '''
 *************************************************************************
  * TEST   : COVID-19
- * DATE   : 9/6/2020
- * AUTHOR : ANKIT BHATNAGAR
+ * DATE   : 12112020
+ * AUTHOR : Ganesh V
 *************************************************************************
 '''
 
@@ -26,15 +26,14 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.well.gotoRowN(1)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',#10times not 5
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',#10times not 5
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(1.00)',#10min not 1
+        'self.holdTestMinutes(10.00)',#10min not 1
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
         'self.pipette.dispense()',
-        'self.tip_trash.moveToTrashUnlock()',
         'self.tip_trash.moveToTrashUnlock()',
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
@@ -52,10 +51,10 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.well.gotoRowN(2)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',#10times not 5
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',#10times not 5
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(1.00)',#10min not 1
+        'self.holdTestMinutes(10.00)',#10min not 1
         'self.well.gotoRowN(2)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
@@ -65,6 +64,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
         'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.well.gotoRowN(2)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_170)',
         'self.tip_trash.trashTips()',
@@ -76,10 +76,10 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.well.gotoRowN(11)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',#10times not 5
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',#10times not 5
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(1.00)',#10min not 1
+        'self.holdTestMinutes(10.00)',#10min not 1
         'self.well.gotoRowN(11)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
@@ -89,6 +89,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
         'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.well.gotoRowN(11)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_170)',
         'self.tip_trash.trashTips()',
@@ -100,18 +101,20 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.well.gotoRowN(12)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',#10times not 5
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',#10times not 5
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(1.00)',#10min not 1
+        'self.holdTestMinutes(10.00)',#10min not 1
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
         'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.moveToTrash()',
         'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_170)',
         'self.tip_trash.trashTips()',
@@ -122,7 +125,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.well.gotoRowN(1)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',#10times not 5
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',#10times not 5
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
         'self.holdTestMinutes(1.00)',
@@ -188,7 +191,9 @@ class TestCovid19(TestBase):
         'self.holdTestMinutes(1.00)',
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
-        'self.tip_trash.trashTips()',
+        'self.tip_trash.moveToTrash()',
+        'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
 
         'self.tip_holder.getTips()',
@@ -196,7 +201,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.well.gotoRowN(1)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
         'self.holdTestMinutes(1.00)',
@@ -219,7 +224,9 @@ class TestCovid19(TestBase):
         'self.holdTestMinutes(1.00)',
         'self.well.gotoRowN(2)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
-        'self.tip_trash.trashTips()',
+        'self.tip_trash.moveToTrash()',
+        'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
 
         'self.tip_holder.getTips()',
@@ -227,7 +234,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.well.gotoRowN(2)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
         'self.holdTestMinutes(1.00)',
@@ -250,7 +257,9 @@ class TestCovid19(TestBase):
         'self.holdTestMinutes(1.00)',
         'self.well.gotoRowN(11)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
-        'self.tip_trash.trashTips()',
+        'self.tip_trash.moveToTrash()',
+        'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
 
         'self.tip_holder.getTips()',
@@ -258,7 +267,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.well.gotoRowN(11)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
         'self.holdTestMinutes(1.00)',
@@ -281,7 +290,9 @@ class TestCovid19(TestBase):
         'self.holdTestMinutes(1.00)',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
-        'self.tip_trash.trashTips()',
+        'self.tip_trash.moveToTrash()',
+        'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
 
         'self.tip_holder.getTips()',
@@ -289,7 +300,7 @@ class TestCovid19(TestBase):
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.well.gotoRowN(12)',
         'self.pipette.dispense()',
-        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 5, 1, 1)',
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
         'self.magnet.engageAll()',
         'self.holdTestMinutes(1.00)',
