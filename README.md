@@ -16,14 +16,14 @@ vjvarada@fracktal.in
 * `main_window` in main.py is an object of `MainUI` class that is the workhorse for the firmware.
 * `MainUI` class is the main workhorse. Using getter methods the `Printer` class and `Tests` class is parsed into the `MainUI` class. `xenovia.ui` is inherited by `MainUI` class.
 * `xenovia_ui` is the generated code from the `xenovia_ui.ui` file made in Qt Designer and then converted into python code using PyQt5 UI code generator 5.14.2 .
-* `Printer` class is Abstracts the Gcode calls to the control board connected over USB and presents an API that is used by `tests` and `MainUI` etc for printer movement functionality.
+* `Printer` class abstracts the Gcode calls to the control board connected over USB and presents an API that is used by `tests` and `MainUI` etc for printer movement functionality.
 * `MKSCheck` creates the connection to the printer over USB.
-* `MKSSerialCommunication` class handles the communication to the printer. its initialised by the `Printer` class.
+* `MKSSerialCommunication` class handles the communication to the printer. It's initialised by the `Printer` class.
 * `Tests` is the class that manages available tests, listing them, parsing their class object to `MainUI` etc.
-* tests folder contains the assays which are dynamically initialised into `MainUI` by `Tests` class. each Assay class inherits `TestBase` class.
+* tests folder contains the assays which are dynamically initialised into `MainUI` by `Tests` class. Each Assay class inherits `TestBase` class.
 * `TestBase` contains methods common to all Assays.
 * When an assay class in dynamically created into `MainUI` by `Tests`, the base function movement classes of `Pipette`, `TipTrash`, `Magnet` etc which have motion related medhods are passed into it.
-* `MechanicalParameters` has all the dimenttions of the accessories in the machine, that the base function movement classes of `Pipette`, `TipTrash`, `Magnet` etc uses.
+* `MechanicalParameters` has all the dimensions of the accessories in the machine, that the base function movement classes of `Pipette`, `TipTrash`, `Magnet` etc uses.
 
 ### Research Links:
 
@@ -45,7 +45,7 @@ vjvarada@fracktal.in
 ### Degugging and Bugs:
 #### Hardware:
 V1.4
-1. Upstream SDA SCL lines on the TCA9548A doesnt not have pullup resistors, uses internal pullups on the raspberry pi board
+1. Upstream SDA SCL lines on the TCA9548A does not have pullup resistors, uses internal pullups on the raspberry pi board
 2. Diodes on the Raspberry Pi shield need to be reversed due to error in placement from JLCPCB
 
 #### Software:
