@@ -74,3 +74,7 @@ V1.4
 
 ### Execution Flow
 ```rc.local ---> startx ---> global .xinitrc ---> pi user .xinitrc ---> xenovia program```
+
+
+### Assay
+For the assay instruction requirement, refer https://docs.google.com/spreadsheets/d/1H6HLvYigPT_AyQD-u33ocX8Hzw2NfqiJH0Qfa-5BsPY/edit?usp=sharing
