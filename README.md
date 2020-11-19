@@ -77,4 +77,5 @@ V1.4
 
 
 ### Assay
-For the assay instruction requirement, refer https://docs.google.com/spreadsheets/d/1H6HLvYigPT_AyQD-u33ocX8Hzw2NfqiJH0Qfa-5BsPY/edit?usp=sharing
+For the assay instructions, 
+refer https://docs.google.com/spreadsheets/d/1H6HLvYigPT_AyQD-u33ocX8Hzw2NfqiJH0Qfa-5BsPY/edit?usp=sharing
