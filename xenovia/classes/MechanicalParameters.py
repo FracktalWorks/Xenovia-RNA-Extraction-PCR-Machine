@@ -61,7 +61,7 @@ class MechanicalParameters(object):
     well_tray_offset_row1_origin_mm = 10
     well_tray_offset_inter_row_mm = 9
     well_tray_offset_from_center_mm = 2.5
-    well_tray_distance_tip_inserted_mm = 30 #40 #33.2
+    well_tray_distance_tip_inserted_mm = 29#30 #40 #33.2
     well_tray_distance_coasting_without_tip_mm = 80 #70 #20
     well_tray_distance_coasting_with_tip_mm = well_tray_distance_coasting_without_tip_mm - tip_length_mm
 
