@@ -17,6 +17,7 @@ class TestPumpingAction(TestBase):
     # Test Specific Data
     test_steps  = [
                      
+            
      # Tip Row number 1
         'self.imagebox_signal.emit("image1.png")',
         'self.textbox_signal.emit("test started")',
@@ -38,9 +39,9 @@ class TestPumpingAction(TestBase):
         'self.pipette.dispense()',
         'self.tip_trash.moveToTrashUnlock()',
         'self.tip_holder.getTips()',
-        'self.holdTestMinutes(0.01)',#10min not 1
+        'self.holdTestMinutes(0.50)',#10min not 1
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         
         #Dispense 470 at trash with tips at end
         'self.well.gotoRowN(1)',
@@ -77,9 +78,9 @@ class TestPumpingAction(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.trashTips()',
@@ -94,9 +95,9 @@ class TestPumpingAction(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.trashTips()',
@@ -113,9 +114,9 @@ class TestPumpingAction(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_300, 10, 1, 1)',
         'self.tip_trash.moveUp()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.trashTips()',
@@ -130,9 +131,46 @@ class TestPumpingAction(TestBase):
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_50, 10, 1, 1)',
         'self.tip_trash.moveUp()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
+        'self.well.gotoRowN(12)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
+        'self.tip_trash.trashTips()',
+        'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
+        'self.magnet.disengageAll()',
+	    
+
+        #new step added-1
+        'self.tip_holder.getTips()',
+        'self.well.gotoRowN(4)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
+        'self.well.gotoRowN(1)',
+        'self.pipette.dispense()',
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_50, 10, 1, 1)',
+        'self.tip_trash.moveUp()',
+        'self.holdTestMinutes(0.50)',
+        'self.magnet.engageAll()',
+        'self.holdTestMinutes(0.50)',
+        'self.well.gotoRowN(1)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
+        'self.tip_trash.trashTips()',
+        'self.pipette.dispense()',
+        'self.tip_trash.moveToTrashUnlock()',
+        'self.magnet.disengageAll()',
+
+        #new step added-2
+        'self.tip_holder.getTips()',
+        'self.well.gotoRowN(9)',
+        'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
+        'self.well.gotoRowN(12)',
+        'self.pipette.dispense()',
+        'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_50, 10, 1, 1)',
+        'self.tip_trash.moveUp()',
+        'self.holdTestMinutes(0.50)',
+        'self.magnet.engageAll()',
+        'self.holdTestMinutes(0.50)',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_300)',
         'self.tip_trash.trashTips()',
@@ -140,17 +178,19 @@ class TestPumpingAction(TestBase):
         'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
 
+        'self.holdTestMinutes(0.50)', # 10 min dwell
+
         #Orange_1
         'self.tip_holder.getTips()',
-        'self.well.gotoRowN(4)',
+        'self.well.gotoRowN(5)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.well.gotoRowN(1)',
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_50, 5, 1, 1)',
         'self.tip_trash.moveUp()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.well.gotoRowN(1)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.pcr.gotoRowN(1)',
@@ -161,15 +201,15 @@ class TestPumpingAction(TestBase):
         'self.magnet.disengageAll()',
         #orange_2
         'self.tip_holder.getTips()',
-        'self.well.gotoRowN(9)',
+        'self.well.gotoRowN(8)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.well.gotoRowN(12)',
         'self.pipette.dispense()',
         'self.pipette.pump(Pipette.PIPETTE_LEVEL_UL_50, 5, 1, 1)',
         'self.tip_trash.moveUp()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.magnet.engageAll()',
-        'self.holdTestMinutes(0.01)',
+        'self.holdTestMinutes(0.50)',
         'self.well.gotoRowN(12)',
         'self.pipette.aspirate(Pipette.PIPETTE_LEVEL_UL_50)',
         'self.pcr.gotoRowN(4)',
@@ -178,7 +218,6 @@ class TestPumpingAction(TestBase):
         'self.pipette.dispense()',
         'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
-
 
     ]
 

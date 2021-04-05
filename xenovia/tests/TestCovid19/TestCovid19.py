@@ -139,7 +139,7 @@ class TestCovid19(TestBase):
         'self.pipette.dispense()',
         'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
-	    'self.holdTestMinutes(10.00)', # 10 min dwell
+	    
 
         #new step added-1
         'self.tip_holder.getTips()',
@@ -176,6 +176,8 @@ class TestCovid19(TestBase):
         'self.pipette.dispense()',
         'self.tip_trash.moveToTrashUnlock()',
         'self.magnet.disengageAll()',
+
+        'self.holdTestMinutes(10.00)', # 10 min dwell
 
         #Orange_1
         'self.tip_holder.getTips()',
