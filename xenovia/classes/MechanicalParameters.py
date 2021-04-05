@@ -24,7 +24,7 @@ class MechanicalParameters(object):
     # 2 Servos
     servo_ports = [0, 1]
     servo_position_degree_disengaged = [0, 0]#[100, 100]
-    servo_position_degree_engaged = [130, 130]#[125, 125]#[135, 150]#[0, 0]
+    servo_position_degree_engaged = [125, 125]#[125, 125]#[135, 150]#[0, 0]
 
     # Pipette
     # 4 Predefined Liquid Levels
