@@ -48,36 +48,35 @@ class WellTray:
         if offset == None:
             # No Offset Required. Go To Center Of The Well
             self.printer_handle.moveYAbsolute(self.__get_row_n(n))
-        elif offset == True:
+        #elif offset == True:
             # Offset Required
-            self.printer_handle.moveYAbsolute(self.__get_row_n(n) + MechanicalParameters.well_tray_offset_from_center_mm)
-        self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-            MechanicalParameters.well_tray_distance_tip_inserted_mm)
+            #self.printer_handle.moveYAbsolute(self.__get_row_n(n) + MechanicalParameters.well_tray_offset_from_center_mm)
+        #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+            #MechanicalParameters.well_tray_distance_tip_inserted_mm)
 
-        if n == 1:
-            self.printer_handle.moveYAbsolute(self.__get_row_n(n) - MechanicalParameters.well_tray_offset_from_center_mm)
-            self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-            MechanicalParameters.well_tray_distance_tip_inserted_mm)
-        elif n == 2:
-            self.printer_handle.moveYAbsolute(self.__get_row_n(n) + (4 * MechanicalParameters.well_tray_offset_from_center_mm))
-            self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-            MechanicalParameters.well_tray_distance_tip_inserted_mm)
-        elif n == 12:
-            self.printer_handle.moveYAbsolute(self.__get_row_n(n) + (4 * MechanicalParameters.well_tray_offset_from_center_mm))
-            self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-            MechanicalParameters.well_tray_distance_tip_inserted_mm)
-        elif n == 11:
-            self.printer_handle.moveYAbsolute(self.__get_row_n(n) - MechanicalParameters.well_tray_offset_from_center_mm)
-            self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-            MechanicalParameters.well_tray_distance_tip_inserted_mm)
+        #if n == 1:
+            #self.printer_handle.moveYAbsolute(self.__get_row_n(n) - MechanicalParameters.well_tray_offset_from_center_mm)
+            #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+            #MechanicalParameters.well_tray_distance_tip_inserted_mm)
+        #elif n == 2:
+            #self.printer_handle.moveYAbsolute(self.__get_row_n(n) + MechanicalParameters.well_tray_offset_from_center_mm)
+            #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+            #MechanicalParameters.well_tray_distance_tip_inserted_mm)
+        #elif n == 12:
+            #self.printer_handle.moveYAbsolute(self.__get_row_n(n) + MechanicalParameters.well_tray_offset_from_center_mm)
+            #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+            #MechanicalParameters.well_tray_distance_tip_inserted_mm)
+        #elif n == 11:
+            #self.printer_handle.moveYAbsolute(self.__get_row_n(n) - MechanicalParameters.well_tray_offset_from_center_mm)
+            #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+            #MechanicalParameters.well_tray_distance_tip_inserted_mm)
 
+    def offsetleft(self):
+         self.printer_handle.moveYAbsolute( self.__get_row_n(n) - MechanicalParameters.well_tray_offset_from_center_mm)
+         self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+        MechanicalParameters.well_tray_distance_tip_inserted_mm)
 
-            #def offsetleft(self):
-                 #self.printer_handle.moveYAbsolute( self.__get_row_n(n) - MechanicalParameters.well_tray_offset_from_center_mm)
-                 #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-                 #MechanicalParameters.well_tray_distance_tip_inserted_mm)
-
-            #def offsetright(self):
-                #self.printer_handle.moveYAbsolute(self.__get_row_n(n) + MechanicalParameters.well_tray_offset_from_center_mm)
-                #self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
-                 #MechanicalParameters.well_tray_distance_tip_inserted_mm)
+    def offsetright(self):
+         self.printer_handle.moveYAbsolute(self.__get_row_n(n) + MechanicalParameters.well_tray_offset_from_center_mm)
+         self.printer_handle.moveZAbsolute(MechanicalParameters.well_tray_distance_coasting_with_tip_mm + \
+        MechanicalParameters.well_tray_distance_tip_inserted_mm)
