@@ -5,8 +5,8 @@
  *
  * Fracktal Works
  * __________________
- * Authors: Ganesh V
- * Created: April 2021
+ * Authors: Ankit Bhatnagar
+ * Created: June 2020
  *
  * Class To Manage Well Properties
  *
